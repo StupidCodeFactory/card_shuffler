@@ -25,6 +25,9 @@ gem 'twitter-bootstrap-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'rails_12factor'
+gem 'foreman'
+gem 'thin'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -32,6 +35,8 @@ gem 'twitter-bootstrap-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rspec-rails'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -43,6 +48,5 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
 end
