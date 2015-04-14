@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resource :shuffle, only: [:show, :create]
-  root 'shuffle#show'
+  resource :shuffle, only: [:create], controller: 'shuffle'
+  root 'home#show'
 end
