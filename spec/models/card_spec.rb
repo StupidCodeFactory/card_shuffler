@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Card do
   describe '#initialize' do
     it 'takes a card name as an argument' do
-      expect { Card.new('AC') }.to_not raise_error
+      expect { Card.new('c1') }.to_not raise_error
     end
 
     it 'the card name shold be valid' do
