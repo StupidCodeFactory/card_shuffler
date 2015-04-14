@@ -2,8 +2,8 @@ class CardDeck
   delegate :shuffle!, to: :cards
   attr_reader :cards
 
-  def initialize
-    self.cards = Card::CARDS_NAME.map { |card_name| Card.new(card_name) }
+  def initialize(card_klass=Card)
+    self.cards = card_klass::CARD_SET.map { |card_name| card_klass.new(card_name) }
   end
 
   private
