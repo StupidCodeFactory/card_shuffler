@@ -7,6 +7,10 @@ RSpec.describe CardDecorator do
     it 'adds the image extension' do
       expect(subject.image_file_name).to eq('AC.svg')
     end
+
+    it 'can have a custom extension' do
+      expect(subject.image_file_name('jpg')).to eq('AC.jpg')
+    end
   end
 
 end

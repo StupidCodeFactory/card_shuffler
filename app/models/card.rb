@@ -7,13 +7,15 @@ class Card
     'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', '10S', 'JS', 'QS', 'KS'
   ].freeze
 
+  attr_reader :name
+
   def initialize(card_name)
     self.name = card_name
     validate_card_name
   end
 
   private
-  attr_accessor :name
+  attr_writer :name
 
   def validate_card_name
     return if CARD_SET.include? name
