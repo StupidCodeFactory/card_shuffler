@@ -1,10 +1,12 @@
 class CardDeck
 
+  attr_reader :cards
 
   def initialize
-    self.cards = CARDS_NAME.map { |card_name| Card.new(card_name) }
+    self.cards = Card::CARDS_NAME.map { |card_name| Card.new(card_name) }
   end
 
   private
-  attr_accessor :cards
+  attr_writer :cards
+
 end
