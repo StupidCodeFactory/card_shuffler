@@ -1,8 +1,14 @@
 class ShuffleController < ApplicationController
 
-  def show
+  def create
+    card_deck.shuffle!
+    @cards = CardDecorator.decorate(card_deck.cards)
+    render :show
   end
 
-  def create
+  private
+
+  def card_deck
+    @card_deck ||= CardDeck.new
   end
 end

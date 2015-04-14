@@ -1,3 +1,4 @@
-.panel.panel-defaul
-  .panel-body
-    Welcome the Shuffle app
+- @cards.in_groups_of(6, false) do |card_row|
+
+  .row
+    = render card_row

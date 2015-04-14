@@ -20,10 +20,10 @@
           = link_to 'Shuffler', root_path, class: 'navbar-brand'
     .container
       .row
-        .col-lg-12
+        .col-xs-12
           .well.center-block
-            = button_to "Shuffle a new deck!", shuffle_path, class: 'btn btn-primary btn-block'
+            = button_to 'Shuffle a new deck!', shuffle_path, class: 'btn btn-primary btn-block'
       .row
-        .col-lg-12
+        .col-xs-12
           = bootstrap_flash
           = yield
