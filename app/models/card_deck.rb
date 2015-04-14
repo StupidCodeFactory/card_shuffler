@@ -1,5 +1,5 @@
 class CardDeck
-
+  delegate :shuffle!, to: :cards
   attr_reader :cards
 
   def initialize

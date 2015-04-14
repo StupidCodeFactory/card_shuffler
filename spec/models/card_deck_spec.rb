@@ -11,10 +11,10 @@ RSpec.describe CardDeck do
     end
   end
 
-  describe '#shuffle' do
+  describe '#shuffle!' do
     it 'shuffles the cards' do
-      expect(subject.cards).to receive(:shuffle)
-      subject.shuffle
+      expect(subject.cards).to receive(:shuffle!)
+      subject.shuffle!
     end
   end
 end
