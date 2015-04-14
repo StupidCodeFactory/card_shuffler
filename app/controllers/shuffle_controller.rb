@@ -1,0 +1,3 @@
+class ShuffleController < ApplicationController
+
+end
